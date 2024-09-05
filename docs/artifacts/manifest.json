@@ -1,0 +1,32 @@
+[
+  {
+    "name": "EMS-ESP-Stable-S3",
+    "branch": "main",
+    "description": "EMS-ESP Stable Firmware for the S3",
+    "url": "",
+    "zipfile": "",
+    "release_details": {
+      "version": "3.6.5",
+      "idf": "v4.3",
+      "platform": "S3",
+      "branch": "main"
+    },
+    "bin_files": [],
+    "manifest_name": "manifest-S3.json"
+  },
+  {
+    "name": "EMS-ESP-Stable-E32V2",
+    "branch": "main",
+    "description": "EMS-ESP Stable Firmware for the E32V2",
+    "url": "",
+    "zipfile": "",
+    "release_details": {
+      "version": "3.6.5",
+      "idf": "v4.3",
+      "platform": "E32V2",
+      "branch": "main"
+    },
+    "bin_files": [],
+    "manifest_name": "manifest-E32V2.json"
+  }
+]

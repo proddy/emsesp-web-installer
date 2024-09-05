@@ -1,0 +1,30 @@
+{
+  "name": "E32V2",
+  "version": "3.6.5",
+  "new_install_prompt_erase": true,
+  "new_install_improv_wait_time": 10,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        {
+          "path": "E32V2/boot_app0.bin",
+          "offset": "0xe000"
+        },
+        {
+          "path": "E32V2/firmware.bin",
+          "offset": "0x150000"
+        },
+        {
+          "path": "E32V2/bootloader.bin",
+          "offset": "0x1000"
+        },
+        {
+          "path": "E32V2/partitions.bin",
+          "offset": "0x8000"
+        }
+      ]
+    }
+  ],
+  "manifest_name": "manifest-E32V2.json"
+}
