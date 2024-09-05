@@ -1,7 +1,7 @@
 {
   "name": "S3",
-  "version": "3.6.5",
-  "new_install_prompt_erase": false,
+  "version": "v3.6.5",
+  "new_install_prompt_erase": true,
   "new_install_improv_wait_time": 10,
   "builds": [
     {
@@ -17,7 +17,7 @@
         },
         {
           "path": "S3/bootloader.bin",
-          "offset": "0x1000"
+          "offset": "0x0000"
         },
         {
           "path": "S3/partitions.bin",

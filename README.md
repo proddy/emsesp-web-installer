@@ -7,3 +7,5 @@ Project is built automatically when check-in by Cloudflare pages and hosted on <
 ## Developing
 
 Use `yarn dev` to test locally.
+
+Note because of the incompatibility we need keep the saas library fixed at version 1.77.6
