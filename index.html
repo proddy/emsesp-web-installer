@@ -33,23 +33,21 @@
         <h1 class="display-3">EMS-ESP Installer</h1>
 
         <div class="d-flex flex-grow-1 align-items-center">
+          <h6><strong>Install the latest EMS-ESP firmware onto a BBQKees Electronics Gateway board</strong>&nbsp;</h6>
           <object data="images/emsesp.png" width="30" height="30"></object>
           <img src="images/r-arrow.png" width="40" height="20" />
           <object data="images/bbqkees.svg" width="30" height="30"></object>
         </div>
 
-        <p class="text-secondary mt-4">
-          <strong>Install the latest EMS-ESP firmware onto a BBQKees Electronics Gateway board.</strong>
-        </p>
-        <p class="text-secondary">
-          Note: This will download and install the current stable version which is
+        <p class="text-secondary mt-3">
+          This will download and install the current stable version which is
           <strong><span id="latest-tag"></span></strong>. You can always decide later to upgrade to the development
           releases from within the EMS-ESP WebUI.
         </p>
 
         <div class="alert alert-dismissible alert-warning">
-          To use, attach the gateway device directly to your computer using a USB cable, select the right Model below
-          and then click&nbsp;
+          To use, attach the Gateway device directly to your computer using a USB cable, choose the model below and then
+          click&nbsp;
           <esp-web-install-button id="button_web_install" manifest="artifacts/manifest">
             <button type="button" class="btn btn-primary" slot="activate">Connect</button>
             <span slot="not-allowed">
@@ -100,8 +98,8 @@
             </div>
             <div class="card-body">
               <p class="card-text">
-                The new Gateway E32 V2, supporting both Ethernet, WiFi and Relays, running on an ESP32 dual-core with
-                16MB Flash + 8MB PSRAM
+                The new Gateway E32 V2, supporting both Ethernet and WiFi, running on an ESP32 dual-core with 16MB Flash
+                + 8MB PSRAM
               </p>
               <p></p>
               <img src="images/E32V2.jpg" width="100%" />
@@ -129,8 +127,6 @@
         <a href="https://github.com/emsesp/EMS-ESP32">EMS-ESP32</a>
         &nbsp;&vert;&nbsp;
         <a href="https://bbqkees-electronics.nl/wiki/">BBQKees Electronics</a>
-        &nbsp;&vert;&nbsp;
-        <a href="https://esphome.github.io/esp-web-tools/">Installer based on ESP Web Tools</a>
       </footer>
     </div>
   </body>
