@@ -5,7 +5,7 @@
   "new_install_improv_wait_time": 10,
   "builds": [
     {
-      "chipFamily": "ESP32",
+      "chipFamily": "ESP32-S3",
       "parts": [
         {
           "path": "S3/boot_app0.bin",
@@ -17,7 +17,7 @@
         },
         {
           "path": "S3/bootloader.bin",
-          "offset": "0x0000"
+          "offset": "0x1000"
         },
         {
           "path": "S3/partitions.bin",
