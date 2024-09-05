@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>EMS-ESP Installer</title>
+    <title>EMS-ESP Installer (beta)</title>
     <script type="module" src="https://unpkg.com/esp-web-tools@10.0.1/dist/web/install-button.js?module"></script>
     <style></style>
   </head>
@@ -16,7 +16,8 @@
         <p class="lead">This is to pre-load BBQKees Gateway boards with EMS-ESP factory firmware.</p>
         <hr class="my-4" />
         <p>
-          Plug the device to your computer using a USB cable and select th BBQKees Gateway device, and click on the connect button below.
+          Plug the device to your computer using a USB cable and select your BBQKees Gateway device, and click on the
+          connect button below.
         </p>
       </div>
 
@@ -24,16 +25,17 @@
         <div class="d-flex flex-row">
           <div class="card bg-secondary mb-3" style="max-width: 20rem" role="button">
             <div class="card-header bg-primary" role="button" id="cardS3_header" manifest="artifacts/manifest-S3.json">
-              <input id="cardS3" type="radio" checked="" /><label for="cardS3"
-                >&nbsp;Gateway S3</label
-              >
+              <input id="cardS3" type="radio" checked="" /><label for="cardS3">&nbsp;Gateway S3</label>
             </div>
             <div class="card-body">
               <p class="card-text">
-                The EMS Gateway S3 (Standard Edition V3.0), WiFi only. Running on an ESP32-S3 with 16MB Flash and PSRAM.
+                The EMS Gateway S3 (Standard Edition V3.0), WiFi only. Running on an ESP32-S3 with 16MB Flash with
+                PSRAM.
               </p>
-              <a href="https://bbqkees-electronics.nl/product/gateway-s3-standard-wifi-edition">Gateway S3 (Standard WiFi Edition V3)</a>
-              </p>
+              <a href="https://bbqkees-electronics.nl/product/gateway-s3-standard-wifi-edition"
+                >Gateway S3 (Standard WiFi Edition V3)</a
+              >
+              <p />
               <img src="images/S3.jpg" width="100%" />
             </div>
           </div>
@@ -43,15 +45,16 @@
               <input id="cardE32V2" type="radio" /><label for="cardE32V2">&nbsp;Gateway E32</label>
             </div>
             <div class="card-body">
-                <p class="card-text">
+              <p class="card-text">
                 The new Gateway E32 V2, supporting both Ethernet, Wifi and Relays. Running on an ESP32 with 16MB Flash.
-                </p>
-                <a href="https://bbqkees-electronics.nl/product/gateway-e32-v2-ethernet-wifi-edition-v2">Gateway E32 V2 (Ethernet + WiFi Edition V2)</a>
-                </p>
-                <img src="images/E32V2.jpg" width="100%" />
-              </div>
+              </p>
+              <a href="https://bbqkees-electronics.nl/product/gateway-e32-v2-ethernet-wifi-edition-v2"
+                >Gateway E32 V2 (Ethernet + WiFi Edition V2)</a
+              >
+              <p />
+              <img src="images/E32V2.jpg" width="100%" />
+            </div>
           </div>
-
         </div>
       </div>
 
@@ -92,7 +95,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </body>
 </html>

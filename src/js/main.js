@@ -171,7 +171,6 @@ fetch("./artifacts/manifest.json")
       if (!platforms[platform]) {
         platforms[platform] = [];
       }
-      console.log("release_details", element.release_details); // TODO remove
       platforms[platform].push({
         branch: element.release_details.branch,
         version: element.release_details.version,
