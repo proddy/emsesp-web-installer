@@ -39,15 +39,17 @@
         </div>
 
         <p class="text-secondary mt-4">
-          <strong> Install the latest EMS-ESP firmware onto a BBQKees Electronics Gateway board.</strong>
+          <strong>Install the latest EMS-ESP firmware onto a BBQKees Electronics Gateway board.</strong>
         </p>
         <p class="text-secondary">
-          Note: This will install the current stable version <u><span id="latest-tag"></span></u>. You can always decide
-          to upgrade on to the development branch from within the EMS-ESP WebUI.
+          Note: This will download and install the current stable version which is
+          <strong><span id="latest-tag"></span></strong>. You can always decide later to upgrade to the development
+          releases from within the EMS-ESP WebUI.
         </p>
 
         <div class="alert alert-dismissible alert-warning">
-          Attach the gateway device to your computer using a USB cable, select the right Model below and then click
+          To use, attach the gateway device directly to your computer using a USB cable, select the right Model below
+          and then click&nbsp;
           <esp-web-install-button id="button_web_install" manifest="artifacts/manifest">
             <button type="button" class="btn btn-primary" slot="activate">Connect</button>
             <span slot="not-allowed">
@@ -81,7 +83,8 @@
             </div>
             <div class="card-body">
               <p class="card-text">
-                The EMS Gateway S3 (Standard Edition V3.0, WiFi), running on an ESP32-S3 with 16MB Flash with PSRAM.
+                The EMS Gateway S3 (Standard Edition V3.0, WiFi), running on an ESP32-S3 dual-core with 16MB Flash + 4MB
+                PSRAM
               </p>
               <p></p>
               <img src="images/S3.jpg" width="100%" />
@@ -97,7 +100,8 @@
             </div>
             <div class="card-body">
               <p class="card-text">
-                The new Gateway E32 V2, supporting both Ethernet, WiFi and Relays, running on an ESP32 with 16MB Flash.
+                The new Gateway E32 V2, supporting both Ethernet, WiFi and Relays, running on an ESP32 dual-core with
+                16MB Flash + 8MB PSRAM
               </p>
               <p></p>
               <img src="images/E32V2.jpg" width="100%" />
