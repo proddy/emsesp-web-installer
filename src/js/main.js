@@ -6,7 +6,6 @@ import { initBootstrap } from "./bootstrap.js";
 //import 'improv-wifi-serial-sdk';
 import $ from "jquery";
 //import { render } from 'sass';
-//import 'crypto'; // Added in: node v14.17.0
 
 window.jQuery = $;
 window.$ = $;
@@ -34,6 +33,7 @@ function getRevisionLine(description) {
   });
   return table;
 }
+
 function render_firmware_button(target, description, manifest, flash_button) {
   let button = document.createElement("div");
   button.innerHTML = flash_button ? `<div class="d-flex justify-content-between flex-row w-100 ">` : "";
@@ -65,6 +65,7 @@ function render_release_body(elem) {
   body.append(tble);
   return body;
 }
+
 function render_release_table(platform, elem) {
   let block = document.createElement("div");
   block.id = `ci_${elem.entry}`;
@@ -77,6 +78,7 @@ function render_release_table(platform, elem) {
   block.append(render_release_body(elem));
   return block;
 }
+
 function render_platform_tab(id, active) {
   let li_item = document.createElement("li");
   li_item.setAttribute("class", "nav-item");
@@ -102,6 +104,7 @@ function render_release_button(elem) {
   );
   return rel_button;
 }
+
 function render_release_header(platform, elem) {
   let rel_head = document.createElement("h3");
   rel_head.setAttribute("class", "accordion-header");
@@ -109,6 +112,7 @@ function render_release_header(platform, elem) {
   rel_head.append(render_release_button(elem));
   return rel_head;
 }
+
 function render_release(platform, elem) {
   let release = document.createElement("div");
   release.setAttribute("class", "accordion-item");
@@ -118,6 +122,7 @@ function render_release(platform, elem) {
 
   return release;
 }
+
 function render_firmware_content(platform, releases, index) {
   let content = document.createElement("div");
   content.setAttribute("class", "tab-pane fade");
@@ -131,12 +136,14 @@ function render_firmware_content(platform, releases, index) {
   acc.classList.add("accordion");
 
   releases.forEach((elem, index) => {
+    console.log(elem);
     acc.append(render_release(platform, elem));
   });
   content.append(acc);
 
   return content;
 }
+
 function populateTabs(json) {
   Object.keys(json).forEach(function (platform, index) {
     $("#platforms_tabs")[0].append(render_platform_tab(platform, index == 0 ? true : false));
@@ -144,6 +151,7 @@ function populateTabs(json) {
     $("#firmware_content")[0].append(firmware_content);
   });
 }
+
 function setManifests(json) {
   // force adds a install-button and the correct manifest file to each link
   Object.keys(json).forEach(function (platform, index) {
@@ -179,7 +187,7 @@ fetch("./artifacts/manifest.json")
         description: element.description
       });
     });
-    //populateTabs(platforms);
+    // populateTabs(platforms);
     setManifests(platforms);
 
     let cont = ["ci_"];
@@ -197,7 +205,13 @@ fetch("./artifacts/manifest.json")
         });
       });
     });
+
+    // simulate clicking the first card
     //$('#platforms_tabs  a[href="#tab_I2S-4MFlash"]')[0].click()
+    // unclickRadio();
+    removeActive();
+    makeActive("cardS3");
+
     function unclickRadio() {
       $("input:radio").prop("checked", false);
     }
@@ -206,11 +220,13 @@ fetch("./artifacts/manifest.json")
     function clickRadio(inputElement) {
       $("#" + inputElement).prop("checked", true);
     }
+
     function removeActive() {
       $(".card-header").removeClass("active");
       $(".card-header").removeClass("bg-primary");
       $(".card-header").removeClass("text-white");
     }
+
     function makeActive(element) {
       const uielem = $("#" + element + "_header");
       uielem.addClass("active");
@@ -218,16 +234,18 @@ fetch("./artifacts/manifest.json")
       uielem.addClass("text-white");
       $("#button_web_install")[0].attributes["manifest"].value = uielem[0].attributes["manifest"].value;
     }
+
     $("input:radio").on("change", function () {
-      //Clicking input radio
+      // Clicking input radio
       let radioClicked = $(this).attr("id");
       unclickRadio();
       removeActive();
       clickRadio(radioClicked);
       makeActive(radioClicked);
     });
+
     $(".card").on("click", function () {
-      //Clicking the card
+      // Clicking the card
       let inputElement = $(this).find("input[type=radio]").attr("id");
       unclickRadio();
       removeActive();
