@@ -12,17 +12,17 @@
   <body style="background-color: #133746">
     <script>
       async function fetchLatestTag() {
-        const repo = "emsesp/EMS-ESP32";
-        const url = `https://api.github.com/repos/${repo}/tags`;
-
+        const url = `https://api.github.com/repos/emsesp/EMS-ESP32/tags`;
         try {
           const response = await fetch(url);
           const data = await response.json();
           const latestTag = data[0].name; // Get the name of the latest tag
           document.getElementById("latest-tag").innerText = latestTag;
+          document.getElementById("release-notes").href =
+            "https://github.com/emsesp/EMS-ESP32/releases/download/" + latestTag + "/CHANGELOG.md";
         } catch (error) {
-          console.error("Error fetching the latest tag:", error);
-          document.getElementById("latest-tag").innerText = "Error fetching tag";
+          console.error("Error fetching details from GH:", error);
+          document.getElementById("latest-tag").innerText = "?";
         }
       }
       fetchLatestTag();
@@ -33,21 +33,31 @@
         <h1 class="display-3">EMS-ESP Installer</h1>
 
         <div class="d-flex flex-grow-1 align-items-center">
-          <h6><strong>Install the latest EMS-ESP firmware onto a BBQKees Electronics Gateway board</strong>&nbsp;</h6>
+          <h6><strong>Install the latest firmware onto a BBQKees Electronics EMS Gateway board</strong>&nbsp;</h6>
           <object data="images/emsesp.png" width="30" height="30"></object>
           <img src="images/r-arrow.png" width="40" height="20" />
           <object data="images/bbqkees.svg" width="30" height="30"></object>
         </div>
 
         <p class="text-secondary mt-3">
-          This will download and install the current stable version which is
-          <strong><span id="latest-tag"></span></strong>. You can always decide later to upgrade to the development
-          releases from within the EMS-ESP WebUI.
+          The BBQKees Electronics Gateways boards, and equivalent, can be flashed with the latest EMS-ESP firmware when
+          connected directly to your computer. This is useful for first-time installations or resetting the deviceto
+          it's factory settings.
+        </p>
+        <p class="text-warning">
+          EMS-ESP firmware version <strong><span id="latest-tag"></span></strong> is the most current version.
+          <a id="release-notes" href="" class="text-warning">Release Notes</a>.
+        </p>
+        <p class="text-secondary">
+          <i>
+            Note: This latest stable version is recommended for most users. You can always decide later to upgrade to
+            the development releases from the EMS-ESP WebUI.
+          </i>
         </p>
 
-        <div class="alert alert-dismissible alert-warning">
+        <div class="alert alert-dismissible alert-light">
           To use, attach the Gateway device directly to your computer using a USB cable, choose the model below and then
-          click&nbsp;
+          click&nbsp;&rarr;
           <esp-web-install-button id="button_web_install" manifest="artifacts/manifest">
             <button type="button" class="btn btn-primary" slot="activate">Connect</button>
             <span slot="not-allowed">
@@ -75,8 +85,13 @@
 
       <div id="device_tiles">
         <div class="d-flex flex-row">
-          <div class="card bg-light mx-auto" style="max-width: 20rem" role="button">
-            <div class="card-header bg-primary" role="button" id="cardS3_header" manifest="artifacts/manifest-S3.json">
+          <div class="card text-white bg-info border-secondary mx-auto" style="max-width: 20rem" role="button">
+            <div
+              class="card-header bg-primary border-secondary"
+              role="button"
+              id="cardS3_header"
+              manifest="artifacts/manifest-S3.json"
+            >
               <input id="cardS3" type="radio" checked="" /><label for="cardS3">&nbsp;Gateway S3</label>
             </div>
             <div class="card-body">
@@ -86,26 +101,37 @@
               </p>
               <p></p>
               <img src="images/S3.jpg" width="100%" />
-              <a href="https://bbqkees-electronics.nl/product/gateway-s3-standard-wifi-edition"
-                >Gateway S3 (Standard WiFi Edition V3)</a
-              >
+              <div class="text-center mt-2">
+                <a class="text-secondary" href="https://bbqkees-electronics.nl/product/gateway-s3-standard-wifi-edition"
+                  >Gateway S3 Product Details</a
+                >
+              </div>
             </div>
           </div>
 
-          <div class="card bg-light mx-auto" style="max-width: 20rem" role="button">
-            <div class="card-header" role="button" id="cardE32V2_header" manifest="artifacts/manifest-E32V2.json">
-              <input id="cardE32V2" type="radio" /><label for="cardE32V2">&nbsp;Gateway E32</label>
+          <div class="card text-white bg-info border-secondary mx-auto" style="max-width: 20rem" role="button">
+            <div
+              class="card-header bg-primary border-secondary"
+              role="button"
+              id="cardE32V2_header"
+              manifest="artifacts/manifest-E32V2.json"
+            >
+              <input id="cardE32V2" type="radio" /><label for="cardE32V2">&nbsp;Gateway E32 V2</label>
             </div>
             <div class="card-body">
               <p class="card-text">
-                The new Gateway E32 V2, supporting both Ethernet and WiFi, running on an ESP32 dual-core with 16MB Flash
-                + 8MB PSRAM
+                The new EMS Gateway E32 V2, supporting both Ethernet and WiFi, running on an ESP32 dual-core with 16MB
+                Flash + 8MB PSRAM
               </p>
               <p></p>
               <img src="images/E32V2.jpg" width="100%" />
-              <a href="https://bbqkees-electronics.nl/product/gateway-e32-v2-ethernet-wifi-edition-v2"
-                >Gateway E32 V2 (Ethernet + WiFi Edition V2)</a
-              >
+              <div class="text-center mt-2">
+                <a
+                  class="text-secondary"
+                  href="https://bbqkees-electronics.nl/product/gateway-e32-v2-ethernet-wifi-edition-v2"
+                  >Gateway E32 V2 Product Details</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -121,12 +147,12 @@
         </div>
       </div> -->
 
-      <hr class="mt-3" style="color: #ffffff" />
+      <hr class="mt-4" style="color: #ffffff" />
 
       <footer class="text-center">
-        <a href="https://github.com/emsesp/EMS-ESP32">EMS-ESP32</a>
+        <a class="text-primary" href="https://emsesp.org/">EMS-ESP32</a>
         &nbsp;&vert;&nbsp;
-        <a href="https://bbqkees-electronics.nl/wiki/">BBQKees Electronics</a>
+        <a class="text-primary" href="https://bbqkees-electronics.nl/wiki/">BBQKees Electronics</a>
       </footer>
     </div>
   </body>

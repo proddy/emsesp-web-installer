@@ -1,12 +1,8 @@
 .vscode
 .DS_Store
 node_modules
-dist/css
-dist/js
+docs/css
+docs/js
 .yarn/install-state.gz
-docs/js/main.js
-docs/js/main.js.LICENSE.txt
-docs/js/main.js.map
-docs/css/main.css
-docs/css/main.css.map
 docs/index.html
+EMS-ESP-*.bin
