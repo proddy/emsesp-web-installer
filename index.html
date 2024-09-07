@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>EMS-ESP Installer</title>
-    <script type="module" src="https://unpkg.com/esp-web-tools@10.0.1/dist/web/install-button.js?module"></script>
-    <style></style>
+    <!-- <script type="module" src="https://unpkg.com/esp-web-tools@10.0.1/dist/web/install-button.js?module"></script> -->
+    <script
+      type="module"
+      src="https://unpkg.com/tasmota-esp-web-tools@8.1.4/dist/web/install-button.js?module"
+    ></script>
   </head>
 
   <body style="background-color: #133746">
@@ -41,8 +44,7 @@
 
         <p class="text-secondary mt-3">
           BBQKees Electronics' EMS Gateways boards, and equivalent, can be flashed with the latest EMS-ESP firmware when
-          connected directly to your computer. This is useful for first-time installations or resetting the deviceto
-          it's factory settings.
+          connected directly to your computer. Any EMS-ESP configuration settings and stored data are not erased.
         </p>
         <p class="text-warning">
           EMS-ESP firmware version <strong><span id="latest-tag"></span></strong> is the most current version.
@@ -96,7 +98,7 @@
             </div>
             <div class="card-body">
               <p class="card-text">
-                The EMS Gateway S3 (Standard Edition V3.0, WiFi), running on an ESP32-S3 dual-core with 16MB Flash + 4MB
+                The EMS Gateway S3 (Standard Edition V3.0, WiFi), running on an ESP32-S3 dual-core with 16MB Flash + 8MB
                 PSRAM
               </p>
               <p></p>
@@ -121,7 +123,7 @@
             <div class="card-body">
               <p class="card-text">
                 The new EMS Gateway E32 V2, supporting both Ethernet and WiFi, running on an ESP32 dual-core with 16MB
-                Flash + 8MB PSRAM
+                Flash + 4MB available PSRAM
               </p>
               <p></p>
               <img src="images/E32V2.png" width="100%" />
