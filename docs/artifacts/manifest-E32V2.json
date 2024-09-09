@@ -13,7 +13,7 @@
         },
         {
           "path": "E32V2/firmware.bin",
-          "offset": "0x150000"
+          "offset": "0x10000"
         },
         {
           "path": "E32V2/bootloader.bin",
