@@ -10,7 +10,7 @@ When a new EMS-ESP Stable firmware is released the steps to follow are:
 - update `docs/artifacts/manifest.json` updating the version and the idf in the `release_details` section.
 - update the `docs/artifacts/manifest-<mcu>.json` file with the new `version`, which starts with a `v`.
 - Test locally with `yarn dev` and <http://localhost:9090/>
-- Check-in the code. The project is built automatically when check-in by Cloudflare pages and hosted on <https://install.emsesp.org>
+- Check-in the code. The project is built automatically by Cloudflare pages and hosted on <https://install.emsesp.org>
 
 ## Development Notes
 
