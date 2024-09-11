@@ -14,5 +14,5 @@ When a new EMS-ESP Stable firmware is released the steps to follow are:
 
 ## Development Notes
 
-- Because of the incompatibility we need keep the `saas` library fixed at version 1.77.6 in `package.json`.
-- Theme is from <https://bootswatch.com/cerulean/>. It's not easy to adjust!
+- Because of the incompatibility we need keep the `saas` library fixed at version 1.77.6 in `package.json` so don't update it!
+- Theme is from <https://bootswatch.com/cerulean/>. It's not easy to adjust the styling.

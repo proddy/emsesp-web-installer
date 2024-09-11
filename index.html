@@ -5,30 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>EMS-ESP Installer</title>
-    <!-- <script type="module" src="https://unpkg.com/esp-web-tools@10.0.1/dist/web/install-button.js?module"></script> -->
-    <script
-      type="module"
-      src="https://unpkg.com/tasmota-esp-web-tools@8.1.4/dist/web/install-button.js?module"
-    ></script>
+    <script type="module" src="https://unpkg.com/emsesp-web-tools@1.0.0/dist/web/install-button.js?module"></script>
   </head>
 
   <body style="background-color: #133746">
     <script>
-      async function fetchLatestTag() {
+      async function fetchLatestVersion() {
         const url = `https://api.github.com/repos/emsesp/EMS-ESP32/tags`;
         try {
           const response = await fetch(url);
           const data = await response.json();
           const latestTag = data[0].name; // Get the name of the latest tag
-          document.getElementById("latest-tag").innerText = latestTag;
+          const versionNumber = latestTag.slice(1);
+          document.getElementById("latest-version").innerText = versionNumber;
           document.getElementById("release-notes").href =
             "https://github.com/emsesp/EMS-ESP32/releases/download/" + latestTag + "/CHANGELOG.md";
         } catch (error) {
-          console.error("Error fetching details from GH:", error);
-          document.getElementById("latest-tag").innerText = "?";
+          console.error("Error fetching details from GH: ", error);
+          document.getElementById("latest-version").innerText = "?";
         }
       }
-      fetchLatestTag();
+      fetchLatestVersion();
     </script>
 
     <div class="container" style="height: 100%">
@@ -43,22 +40,18 @@
         </div>
 
         <p class="text-secondary mt-3">
-          BBQKees Electronics' EMS Gateways boards, and equivalent, can be flashed with the latest EMS-ESP firmware when
-          connected directly to your computer. Any EMS-ESP configuration settings and stored data are not erased.
+          BBQKees Electronics' EMS Gateways boards can be flashed with the latest EMS-ESP firmware when connected
+          directly to your computer. This can also be used for ESP32's that match the same chip type (ESP32S or ESP32-S3
+          with 16MB flash and PSRAM).
         </p>
         <p class="text-warning">
-          EMS-ESP firmware version <strong><span id="latest-tag"></span></strong> is the most current version.
-          <a id="release-notes" href="" class="text-warning">Release Notes</a>.
-        </p>
-        <p class="text-secondary">
-          <i>
-            Note: This latest stable version is recommended for most users. You can always decide later to upgrade to
-            the development releases from the EMS-ESP WebUI.
-          </i>
+          EMS-ESP firmware <strong>version <span id="latest-version"></span></strong> is the most current version.
+          See&nbsp;<a id="release-notes" href="" class="text-warning">Release Notes</a>. Switching to the development
+          release track can be done from within the EMS-ESP WebUI.
         </p>
 
-        <div class="alert alert-dismissible alert-light">
-          To use, attach the Gateway device directly to your computer using a USB cable, choose the model below and then
+        <div class="alert alert-dismissible alert-warning">
+          Attach the Gateway device directly to your computer using a USB cable, select your model below and
           click&nbsp;&rarr;&nbsp;
           <esp-web-install-button id="button_web_install" manifest="artifacts/manifest">
             <button type="button" class="btn btn-primary" slot="activate">Connect</button>
@@ -152,7 +145,6 @@
       <hr class="mt-4" style="color: #ffffff" />
 
       <footer class="text-center text-primary">
-        &#169;&nbsp;
         <a href="https://emsesp.org/">EMS-ESP</a>
         &nbsp;&vert;&nbsp;
         <a href="https://bbqkees-electronics.nl/wiki/">BBQKees Electronics</a>
