@@ -1,6 +1,6 @@
 # EMS-ESP Web Installer
 
-Code and concept is based off [squeezelite-esp32-installer](https://github.com/sle118/squeezelite-esp32-installer) and uses ESPHome's [esp-web-tools](https://github.com/esphome/esp-web-tools/releases) which Home Assistant and Tasmota also use.
+Code and concept is based off [squeezelite-esp32-installer](https://github.com/sle118/squeezelite-esp32-installer) and uses ESPHome's [esp-web-tools](https://github.com/esphome/esp-web-tools) which Home Assistant and Tasmota also use.
 
 ## Updating Firmware
 

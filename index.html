@@ -41,39 +41,13 @@
 
         <p class="text-secondary mt-3">
           BBQKees Electronics' EMS Gateways boards can be flashed with the latest EMS-ESP firmware when connected
-          directly to your computer. This can also be used for ESP32's that match the same chip type (ESP32S or ESP32-S3
-          with 16MB flash and PSRAM).
+          directly to your computer via the USB port. This can also be used for ESP32's that match the same chip type
+          (ESP32S or ESP32-S3 with 16MB flash and PSRAM).
         </p>
         <p class="text-warning">
           EMS-ESP firmware <strong>version <span id="latest-version"></span></strong> is the most current version.
-          See&nbsp;<a id="release-notes" href="" class="text-warning">Release Notes</a>. Switching to the development
-          release track can be done from within the EMS-ESP WebUI.
+          See&nbsp;<a id="release-notes" href="" class="text-warning">Release Notes</a>.
         </p>
-
-        <div class="alert alert-dismissible alert-warning">
-          Attach the Gateway device directly to your computer using a USB cable, select your model below and
-          click&nbsp;&rarr;&nbsp;
-          <esp-web-install-button id="button_web_install" manifest="artifacts/manifest">
-            <button type="button" class="btn btn-primary" slot="activate">Connect</button>
-            <span slot="not-allowed">
-              <div class="alert alert-dismissible alert-danger">
-                <div class="col text-center">
-                  <button type="button" class="btn-close" data-bs-dismiss="alert"></button><strong>Not Allowed</strong>
-                </div>
-                <div>Flashing is only supported from the local host or from a secure web site.</div>
-              </div>
-            </span>
-            <span slot="notsupported">
-              <div class="alert alert-dismissible alert-danger">
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button
-                ><strong>Browser Not Supported</strong>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API#browser_compatibility"
-                  >Make sure you are using a compatible browser</a
-                >
-              </div>
-            </span>
-          </esp-web-install-button>
-        </div>
       </div>
 
       <div id="latest-tag"></div>
@@ -91,16 +65,39 @@
             </div>
             <div class="card-body">
               <p class="card-text">
-                The EMS Gateway S3 (Standard Edition V3.0, WiFi), running on an ESP32-S3 dual-core with 16MB Flash + 8MB
-                PSRAM
-              </p>
-              <p></p>
-              <img src="images/S3.png" width="100%" />
-              <div class="card-footer text-center text-muted">
-                <a class="text-secondary" href="https://bbqkees-electronics.nl/product/gateway-s3-standard-wifi-edition"
-                  >Gateway S3 Product Details</a
+                The
+                <a
+                  class="text-secondary"
+                  target="_blank"
+                  href="https://bbqkees-electronics.nl/product/gateway-s3-standard-wifi-edition"
+                  >Gateway S3</a
                 >
-              </div>
+                is WiFi only and uses an ESP32-S3 dual-core with 16MB Flash + 8MB PSRAM.
+              </p>
+              <img src="images/S3.png" width="100%" />
+            </div>
+            <div class="card-footer text-center text-muted">
+              <esp-web-install-button id="button_web_install" manifest="artifacts/manifest">
+                <button type="button" class="btn btn-primary" slot="activate">Connect</button>
+                <span slot="not-allowed">
+                  <div class="alert alert-dismissible alert-danger">
+                    <div class="col text-center">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert"></button
+                      ><strong>Not Allowed</strong>
+                    </div>
+                    <div>Flashing is only supported from the local host or from a secure web site.</div>
+                  </div>
+                </span>
+                <span slot="notsupported">
+                  <div class="alert alert-dismissible alert-danger">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button
+                    ><strong>Browser Not Supported</strong>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API#browser_compatibility"
+                      >Make sure you are using a compatible browser</a
+                    >
+                  </div>
+                </span>
+              </esp-web-install-button>
             </div>
           </div>
 
@@ -115,18 +112,39 @@
             </div>
             <div class="card-body">
               <p class="card-text">
-                The new EMS Gateway E32 V2, supporting both Ethernet and WiFi, running on an ESP32 dual-core with 16MB
-                Flash + 4MB available PSRAM
-              </p>
-              <p></p>
-              <img src="images/E32V2.png" width="100%" />
-              <div class="card-footer text-center text-muted">
+                The
                 <a
                   class="text-secondary"
+                  target="_blank"
                   href="https://bbqkees-electronics.nl/product/gateway-e32-v2-ethernet-wifi-edition-v2"
-                  >Gateway E32 V2 Product Details</a
+                  >Gateway E32 V2</a
                 >
-              </div>
+                supporting both Ethernet and WiFi, running on an ESP32 dual-core with 16MB Flash + 4MB available PSRAM.
+              </p>
+              <img src="images/E32V2.png" width="100%" />
+            </div>
+            <div class="card-footer text-center text-muted">
+              <esp-web-install-button id="button_web_install" manifest="artifacts/manifest">
+                <button type="button" class="btn btn-primary" slot="activate">Connect</button>
+                <span slot="not-allowed">
+                  <div class="alert alert-dismissible alert-danger">
+                    <div class="col text-center">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert"></button
+                      ><strong>Not Allowed</strong>
+                    </div>
+                    <div>Flashing is only supported from the local host or from a secure web site.</div>
+                  </div>
+                </span>
+                <span slot="notsupported">
+                  <div class="alert alert-dismissible alert-danger">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button
+                    ><strong>Browser Not Supported</strong>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API#browser_compatibility"
+                      >Make sure you are using a compatible browser</a
+                    >
+                  </div>
+                </span>
+              </esp-web-install-button>
             </div>
           </div>
         </div>
