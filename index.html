@@ -40,9 +40,17 @@
         </div>
 
         <p class="text-secondary mt-3">
-          BBQKees Electronics' EMS Gateways boards can be flashed with the latest EMS-ESP firmware when connected
-          directly to your computer via the USB port. This can also be used for ESP32's that match the same chip type
-          (ESP32S or ESP32-S3 with 16MB flash and PSRAM).
+          BBQKees Electronics' EMS Gateways boards can be installed with the latest EMS-ESP firmware when connected
+          directly to the USB port of your computer. Plug in the cable as indicated below, choose the Gateway model and
+          click Connect.
+        </p>
+        <p class="text-secondary mt-3">
+          If you are unsure which version of the EMS-ESP firmware is currently installed, click one of the Connect
+          buttons, choose "Open Console" and type <b>show system</b>.
+        </p>
+        <p class="text-secondary mt-3">
+          Note: The firmware is also compatible with any ESP32's that match the same chip type (ESP32S or ESP32-S3) and
+          memory profile (16MB flash with additional PSRAM).
         </p>
         <p class="text-warning">
           EMS-ESP firmware <strong>version <span id="latest-version"></span></strong> is the most current version.
@@ -74,7 +82,7 @@
                 >
                 is WiFi only and uses an ESP32-S3 dual-core with 16MB Flash + 8MB PSRAM.
               </p>
-              <img src="images/EMS-Gateway-S3.png" width="100%" />
+              <img src="images/USB-C-port-EMS-Gateway-S3-and-S3-LR.png" width="100%" />
             </div>
             <div class="card-footer text-center text-muted">
               <esp-web-install-button id="button_web_install" manifest="artifacts/manifest">
@@ -121,7 +129,7 @@
                 >
                 supporting both Ethernet and WiFi, running on an ESP32 dual-core with 16MB Flash + 4MB available PSRAM.
               </p>
-              <img src="images/EMS-Gateway-E32-V2.png" width="100%" />
+              <img src="images/USB-C-port-EMS-Gateway-E32-V2.png" width="100%" />
             </div>
             <div class="card-footer text-center text-muted">
               <esp-web-install-button id="button_web_install" manifest="artifacts/manifest">
