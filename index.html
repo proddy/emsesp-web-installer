@@ -41,20 +41,28 @@
 
         <p class="text-secondary mt-3">
           BBQKees Electronics' EMS Gateways boards can be installed with the latest EMS-ESP firmware when connected
-          directly to the USB port of your computer. Plug in the cable as indicated below, choose the Gateway model and
-          click Connect.
+          directly to the USB port of your computer.
+          <b>Connect</b>.
         </p>
         <p class="text-secondary mt-3">
-          If you are unsure which version of the EMS-ESP firmware is currently installed, click one of the Connect
-          buttons, choose "Open Console" and type <b>show system</b>.
+          To use, select the Gateway model below, plug in a USB-Cable and click
+          <b>Connect</b>.
+        </p>
+        <p class="text-secondary mt-3">
+          If you are unsure which version of the EMS-ESP firmware is currently installed, click on the Connect button,
+          choose "Open Console" (if prompted press CTRL-C) and type <b>show system</b>.
         </p>
         <p class="text-secondary mt-3">
           Note: The firmware is also compatible with any ESP32's that match the same chip type (ESP32S or ESP32-S3) and
           memory profile (16MB flash with additional PSRAM).
         </p>
         <p class="text-warning">
-          EMS-ESP firmware <strong>version <span id="latest-version"></span></strong> is the most current version.
-          See&nbsp;<a id="release-notes" href="" class="text-warning">Release Notes</a>.
+          Latest stable firmware version is <strong><span id="latest-version"></span></strong>. See&nbsp;<a
+            id="release-notes"
+            href=""
+            class="text-warning"
+            >Release Notes</a
+          >.
         </p>
       </div>
 
@@ -84,7 +92,7 @@
               </p>
               <img src="images/USB-C-port-EMS-Gateway-S3-and-S3-LR.png" width="100%" />
             </div>
-            <div class="card-footer text-center text-muted">
+            <!-- <div class="card-footer text-center text-muted">
               <esp-web-install-button id="button_web_install" manifest="artifacts/manifest">
                 <button type="button" class="btn btn-info" slot="activate">Connect</button>
                 <span slot="not-allowed">
@@ -106,7 +114,7 @@
                   </div>
                 </span>
               </esp-web-install-button>
-            </div>
+            </div> -->
           </div>
 
           <div class="card text-white bg-dark border-primary mx-auto" style="max-width: 20rem" role="button">
@@ -131,7 +139,7 @@
               </p>
               <img src="images/USB-C-port-EMS-Gateway-E32-V2.png" width="100%" />
             </div>
-            <div class="card-footer text-center text-muted">
+            <!-- <div class="card-footer text-center text-muted">
               <esp-web-install-button id="button_web_install" manifest="artifacts/manifest">
                 <button type="button" class="btn btn-info" slot="activate">Connect</button>
                 <span slot="not-allowed">
@@ -153,9 +161,32 @@
                   </div>
                 </span>
               </esp-web-install-button>
-            </div>
+            </div> -->
           </div>
         </div>
+      </div>
+
+      <div class="col text-center mt-4">
+        <esp-web-install-button id="button_web_install" manifest="artifacts/manifest">
+          <button type="button" class="btn btn-lg btn-info" slot="activate">Connect</button>
+          <span slot="not-allowed">
+            <div class="alert alert-dismissible alert-danger">
+              <div class="col text-center">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button><strong>Not Allowed</strong>
+              </div>
+              <div>Flashing is only supported from the local host or from a secure web site.</div>
+            </div>
+          </span>
+          <span slot="notsupported">
+            <div class="alert alert-dismissible alert-danger">
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button
+              ><strong>Browser Not Supported</strong>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API#browser_compatibility"
+                >Make sure you are using a compatible browser</a
+              >
+            </div>
+          </span>
+        </esp-web-install-button>
       </div>
 
       <!-- <div style="height: 75%">
