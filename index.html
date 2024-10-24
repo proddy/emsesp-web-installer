@@ -31,40 +31,33 @@
     <div class="container" style="height: 100%">
       <div class="jumbotron" style="width: 100%; height: 75%">
         <h1 class="display-3">EMS-ESP Installer</h1>
-
+        <!-- 
         <div class="d-flex flex-grow-1 align-items-center">
           <h6><strong>Install the latest firmware onto a BBQKees Electronics EMS Gateway board</strong>&nbsp;</h6>
-          <object data="images/emsesp.png" width="30" height="30"></object>
-          <img src="images/r-arrow.png" width="40" height="20" />
-          <object data="images/bbqkees.svg" width="30" height="30"></object>
-        </div>
+        </div> -->
 
         <p class="text-secondary mt-3">
-          BBQKees Electronics' EMS Gateways boards can be installed with the latest EMS-ESP firmware when connected
-          directly to your computer. The existing settings and configuration will be preserved.
+          BBQKees Electronics EMS Gateways boards and custom ESP32-based boards can be flashed with the latest EMS-ESP
+          firmware when connected directly to your computer.
         </p>
         <p class="text-secondary mt-3">
-          To use, select the Gateway model below, plug in a USB-C cable as indicated in the picture, connect this to
-          your computer and click on the
-          <b>Connect</b> button.
+          To use, select the appropriate model below (S3 for an ESP32-S3 or E32 for ESP32/S compatible chip set), attach
+          the device to a USB port on your computer and click on the
+          <strong>Connect</strong> button below. Note all EMS-ESP settings will be preserved.
         </p>
         <p class="text-secondary mt-3">
-          If you are unsure which version of the EMS-ESP firmware is currently installed, you can check this via the
-          Console. Click on the <b>Connect</b> button, choose "Open Console" from the options and the serial console
-          will be displayed. Now type <b>show system</b> and press the Enter key.
+          If you are unsure which version of the EMS-ESP firmware is currently installed, click on the
+          <b>Connect</b> button, select "Open Console" and type
+          <b style="color: yellow; font-family: 'Courier New', monospace">show system</b>&nbsp;in the Serial console.
         </p>
-        <p class="text-secondary mt-3">
-          Note: The firmware release is also compatible with any ESP32's that match the same chip type (ESP32S or
-          ESP32-S3) and memory profile (16MB flash with additional PSRAM).
-        </p>
-        <p class="text-warning">
-          Latest stable firmware version is <strong><span id="latest-version"></span></strong>. See&nbsp;<a
+        <h6>
+          Latest stable firmware version is <strong><span id="latest-version"></span></strong>.&nbsp;<a
             id="release-notes"
             href=""
-            class="text-warning"
-            >Release Notes</a
-          >.
-        </p>
+            >(Changelog)</a
+          >
+        </h6>
+        <p />
       </div>
 
       <div id="latest-tag"></div>
@@ -93,29 +86,6 @@
               </p>
               <img src="images/USB-C-port-EMS-Gateway-S3-and-S3-LR.png" width="100%" />
             </div>
-            <!-- <div class="card-footer text-center text-muted">
-              <esp-web-install-button id="button_web_install" manifest="artifacts/manifest">
-                <button type="button" class="btn btn-info" slot="activate">Connect</button>
-                <span slot="not-allowed">
-                  <div class="alert alert-dismissible alert-danger">
-                    <div class="col text-center">
-                      <button type="button" class="btn-close" data-bs-dismiss="alert"></button
-                      ><strong>Not Allowed</strong>
-                    </div>
-                    <div>Flashing is only supported from the local host or from a secure web site.</div>
-                  </div>
-                </span>
-                <span slot="notsupported">
-                  <div class="alert alert-dismissible alert-danger">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button
-                    ><strong>Browser Not Supported</strong>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API#browser_compatibility"
-                      >Make sure you are using a compatible browser</a
-                    >
-                  </div>
-                </span>
-              </esp-web-install-button>
-            </div> -->
           </div>
 
           <div class="card text-white bg-dark border-primary mx-auto" style="max-width: 20rem" role="button">
@@ -140,36 +110,19 @@
               </p>
               <img src="images/USB-C-port-EMS-Gateway-E32-V2.png" width="100%" />
             </div>
-            <!-- <div class="card-footer text-center text-muted">
-              <esp-web-install-button id="button_web_install" manifest="artifacts/manifest">
-                <button type="button" class="btn btn-info" slot="activate">Connect</button>
-                <span slot="not-allowed">
-                  <div class="alert alert-dismissible alert-danger">
-                    <div class="col text-center">
-                      <button type="button" class="btn-close" data-bs-dismiss="alert"></button
-                      ><strong>Not Allowed</strong>
-                    </div>
-                    <div>Flashing is only supported from the local host or from a secure web site.</div>
-                  </div>
-                </span>
-                <span slot="notsupported">
-                  <div class="alert alert-dismissible alert-danger">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button
-                    ><strong>Browser Not Supported</strong>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API#browser_compatibility"
-                      >Make sure you are using a compatible browser</a
-                    >
-                  </div>
-                </span>
-              </esp-web-install-button>
-            </div> -->
           </div>
         </div>
       </div>
 
       <div class="col text-center mt-4">
         <esp-web-install-button id="button_web_install" manifest="artifacts/manifest">
-          <button type="button" class="btn btn-lg btn-info" slot="activate">Connect</button>
+          <button type="button" class="btn btn-lg btn-info" slot="activate">
+            &nbsp;Connect&nbsp;
+            <img src="images/emsesp.png" width="30" height="30" />
+            <img src="images/r-arrow.png" width="40" height="20" />
+            <img src="images/bbqkees.svg" width="30" height="30" />
+            &nbsp;
+          </button>
           <span slot="not-allowed">
             <div class="alert alert-dismissible alert-danger">
               <div class="col text-center">
