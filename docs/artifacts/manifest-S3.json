@@ -1,6 +1,6 @@
 {
   "name": "S3",
-  "version": "3.6.5",
+  "version": "3.7.0",
   "new_install_prompt_erase": false,
   "new_install_improv_wait_time": 10,
   "builds": [

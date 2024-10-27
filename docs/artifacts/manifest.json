@@ -6,7 +6,7 @@
     "url": "",
     "zipfile": "",
     "release_details": {
-      "version": "3.6.5",
+      "version": "3.7.0",
       "idf": "v4.4",
       "platform": "S3",
       "branch": "main"
@@ -21,7 +21,7 @@
     "url": "",
     "zipfile": "",
     "release_details": {
-      "version": "3.6.5",
+      "version": "3.7.0",
       "idf": "v4.4",
       "platform": "E32V2",
       "branch": "main"
