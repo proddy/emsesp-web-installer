@@ -32,9 +32,9 @@
     "mime-types": "^2.1.35",
     "mini-css-extract-plugin": "^2.9.2",
     "path": "^0.12.7",
-    "postcss": "^8.4.48",
+    "postcss": "^8.4.49",
     "postcss-loader": "^8.1.1",
-    "postcss-preset-env": "^10.0.9",
+    "postcss-preset-env": "^10.1.1",
     "sass": "1.77.6",
     "sass-loader": "^16.0.3",
     "sharp": "^0.33.5",
@@ -53,5 +53,5 @@
     "jquery": "^3.7.1",
     "typeface-roboto": "^1.1.13"
   },
-  "packageManager": "yarn@4.5.1"
+  "packageManager": "yarn@4.5.2"
 }

@@ -12,7 +12,14 @@ When a new EMS-ESP Stable firmware is released the steps to follow are:
 - Test locally with `yarn dev` on <http://localhost:9090/>
 - Check-in the code. The project is built automatically by Cloudflare pages and hosted on <https://install.emsesp.org>
 
-## Development Notes
+## Updating libraries
 
-- Because of the incompatibility we need keep the `saas` library fixed at version 1.77.6 in `package.json` so don't update it!
+```sh
+ncu -i
+```
+
+ Important! Keep the `saas` library fixed at version 1.77.6 otherwise the build will break.
+
+## Customizing
+
 - Bootstrap web theme is from <https://bootswatch.com/cerulean/>. It's not easy to adjust the styling and colors mind you.
