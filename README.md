@@ -18,7 +18,7 @@ When a new EMS-ESP Stable firmware is released the steps to follow are:
 ncu -i
 ```
 
- Important! Keep the `saas` library fixed at version 1.77.6 otherwise the build will break.
+Important! Keep the `saas` library fixed at version 1.77.6 otherwise the build will break.
 
 ## Customizing
 
