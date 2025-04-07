@@ -46,7 +46,7 @@
     "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
-    "bootswatch": "^5.3.3",
+    "bootswatch": "^5.3.5",
     "escape-html": "^1.0.3",
     "improv-wifi-sdk": "^1.4.0",
     "improv-wifi-serial-sdk": "^2.5.0",
