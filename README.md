@@ -19,9 +19,18 @@ pnpm update
 ```
 
 - Test locally with `pnpm dev` on <http://localhost:9090/>
-- Check-in the code. The project is built automatically by Cloudflare pages and hosted on <https://install.emsesp.org>
 
 Important! Keep the `saas` library fixed at version 1.77.6 otherwise the build will break.
+
+## Testing
+
+```sh
+pnpm build
+```
+
+## Deploying
+
+Just commit and push to the repository. Cloudflare pages will automatically build and deploy the new version. This will take less than a minute to complete. The web installer will be available at <https://install.emsesp.org>.
 
 ## Customizing
 
