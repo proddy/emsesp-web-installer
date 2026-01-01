@@ -6,17 +6,19 @@ Code and concept is based off [squeezelite-esp32-installer](https://github.com/s
 
 When a new EMS-ESP Stable firmware is released the steps to follow are:
 
-- Copy the firmware as `firmware.bin` to the `docs/artifacts/<mcu>` folder. Easiest way is to download the zip file from the [releases page](https://github.com/emsesp/EMS-ESP32/releases) and extract the `firmware.bin` file to the correct folder. S3 is "*-ESP32S3-16MB+.bin" and E32V2 is "*-ESP32-16MB+.bin".
+- Copy the firmware as `firmware.bin` to the `docs/artifacts/<mcu>` folder. Easiest way is to download the zip file from the [releases page](https://github.com/emsesp/EMS-ESP32/releases) and download the firmware `.bin` file, rename to `firmware.bin` and place in the correct folder. For example
+  - S3 is "*-ESP32S3-16MB+.bin"
+  - E32V2 is "*-ESP32-16MB+.bin"
 - Update `docs/artifacts/manifest.json` updating the version and the idf (optional) in the `release_details` section.
 - Update each `docs/artifacts/manifest-<mcu>.json` file with the new `version`
 
 ## Updating libraries
 
 ```sh
-ncu -i
+pnpm update
 ```
 
-- Test locally with `yarn dev` on <http://localhost:9090/>
+- Test locally with `pnpm dev` on <http://localhost:9090/>
 - Check-in the code. The project is built automatically by Cloudflare pages and hosted on <https://install.emsesp.org>
 
 Important! Keep the `saas` library fixed at version 1.77.6 otherwise the build will break.

@@ -3,6 +3,5 @@
 node_modules
 docs/css
 docs/js
-.yarn/install-state.gz
 docs/index.html
 EMS-ESP-*.bin
