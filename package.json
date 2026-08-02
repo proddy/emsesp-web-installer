@@ -15,10 +15,10 @@
     "url": "https://github.com/proddy/emsesp-web-installer.git"
   },
   "devDependencies": {
-    "@babel/core": "^7.29.0",
-    "@babel/preset-env": "^7.29.5",
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
     "@popperjs/core": "^2.11.8",
-    "autoprefixer": "^10.5.0",
+    "autoprefixer": "^10.5.4",
     "babel-loader": "^10.1.1",
     "bootstrap": "^5.3.8",
     "connect-fonts-roboto": "^0.0.5",
@@ -28,11 +28,11 @@
     "expose-loader": "^5.0.1",
     "fast-glob": "^3.3.3",
     "google-fonts": "^1.0.0",
-    "html-webpack-plugin": "^5.6.7",
+    "html-webpack-plugin": "^5.6.8",
     "mime-types": "^3.0.2",
     "mini-css-extract-plugin": "^2.10.2",
     "path": "^0.12.7",
-    "postcss": "^8.5.14",
+    "postcss": "^8.5.25",
     "postcss-loader": "^8.2.1",
     "postcss-preset-env": "^10.6.1",
     "sass": "1.77.6",
@@ -41,15 +41,15 @@
     "style-loader": "^4.0.0",
     "trash": "^10.1.1",
     "uuid": "^13.0.2",
-    "webpack": "^5.106.2",
+    "webpack": "^5.109.2",
     "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.4"
+    "webpack-dev-server": "^5.2.6"
   },
   "dependencies": {
     "bootswatch": "^5.3.8",
     "escape-html": "^1.0.3",
     "improv-wifi-sdk": "^1.4.0",
-    "improv-wifi-serial-sdk": "^2.5.0",
+    "improv-wifi-serial-sdk": "^2.8.1",
     "jquery": "^3.7.1",
     "typeface-roboto": "^1.1.13"
   },
