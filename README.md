@@ -6,7 +6,7 @@ Code and concept is based off [squeezelite-esp32-installer](https://github.com/s
 
 When a new EMS-ESP Stable firmware is released the steps to follow are:
 
-- Copy the firmware as `firmware.bin` to the `docs/artifacts/<mcu>` folder. Easiest way is to download the zip file from the [releases page](https://github.com/emsesp/EMS-ESP32/releases) and download the firmware `.bin` file, rename to `firmware.bin` and place in the correct folder. For example
+- Copy the firmware as `firmware.bin` to the `docs/artifacts/<mcu>` folder. Easiest way is to download the .bin files from the [releases page](https://github.com/emsesp/EMS-ESP32/releases), rename to `firmware.bin` and place in the correct folder. For example
   - S3 is "*-ESP32S3-16MB+.bin"
   - E32V2 is "*-ESP32-16MB+.bin"
 - Update `docs/artifacts/manifest.json` updating the version and the idf (optional) in the `release_details` section.
